@@ -1,0 +1,8 @@
+#Technologies Used
+Python
+Pandas
+Numpy
+Matplotlib
+os
+Google colab
+git
