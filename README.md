@@ -63,7 +63,7 @@ NumPy – numerical operations
 
 Matplotlib – data visualization
 
-Jupyter Notebook – interactive analysis
+Google Colab – interactive analysis
 
 🔍 Key Analysis Performed
 
@@ -121,11 +121,11 @@ Run the notebook cells sequentially
 
 📎 Project Structure
 
-├── imdb_data.csv
-├── IMDB_Movie_Analysis.ipynb
+├── data/imdb_data.csv
+├── notebook/IMDB_Movie_Analysis.ipynb
 └── README.md
 
 📬 Contact
 
-Saransh ChaharAspiring Data Analyst / Data ScientistGitHub: https://github.com/Saransh45
+Saransh Chahar-Aspiring Data Analyst / Data ScientistGitHub: https://github.com/Saransh45
 
