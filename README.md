@@ -111,7 +111,7 @@ Focus on business and profitability insights, not just surface-level trends
 
 Clone the repository
 
-Open the Jupyter Notebook
+Open Google colab
 
 Install required libraries:
 
@@ -122,7 +122,7 @@ Run the notebook cells sequentially
 📎 Project Structure
 
 ├── data/imdb_data.csv
-├── notebook/IMDB_Movie_Analysis.ipynb
+├── notebook/IMDB Movie Performance & Profitability Analysis.ipynb
 └── README.md
 
 📬 Contact
