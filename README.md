@@ -1,4 +1,5 @@
-#IMDb Movies Revenue & Profitability Analysis
+**IMDb Movies Revenue & Profitability Analysis**
+
 Overview
 
 This project analyzes IMDb movie data to understand revenue trends, profitability drivers, language dominance, release trends, and movie runtime patterns using Python and Pandas.
@@ -20,6 +21,10 @@ Examine maximum movie runtimes over the years.
 Dataset
 
 Source: IMDb movie dataset (CSV)
+
+**The dataset used in this project is not included in the repository due to GitHub file size limitations.**
+**Dataset access (view-only):**
+https://drive.google.com/file/d/1kbmUarIMIDq51Y5BqPiC7vu2m3d-p6Cq/view?usp=sharing
 
 Size: ~3000 movies
 
