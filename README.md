@@ -1,131 +1,151 @@
+#IMDb Movies Revenue & Profitability Analysis
+Overview
 
-#IMDB Movie Performance & Profitability Analysis
+This project analyzes IMDb movie data to understand revenue trends, profitability drivers, language dominance, release trends, and movie runtime patterns using Python and Pandas.
 
-📌 Project Overview
+The dataset contains ~3000 movies with 23 features including revenue, budget, runtime, language, genres, popularity, and release dates.
 
-This project focuses on exploratory data analysis (EDA) of an IMDB movie dataset enriched with financial, popularity, genre, and release-date information. The goal is to understand what factors influence movie profitability and performance, rather than only ratings.
+Objective
 
-The analysis emphasizes real-world data handling, feature engineering, and business-oriented insights using Python.
+Explore IMDb movie dataset and identify trends in revenue and profitability.
 
-🗂️ Dataset Description
+Investigate the impact of original language on revenue.
 
-The dataset contains detailed movie-level information, including:
+Analyze release year trends and growth patterns in the global film industry.
 
-🔹 Financial Metrics
+Perform feature engineering and data cleaning for accurate analysis.
 
-budget
+Examine maximum movie runtimes over the years.
 
-Revenue
+Dataset
 
-Profit, profit, new_profit, profit_value
+Source: IMDb movie dataset (CSV)
 
-🔹 Popularity & Engagement
+Size: ~3000 movies
 
-popularity
+Key Features:
 
-popularity_new
+Revenue, budget, runtime, original_language, genres, popularity, release_date
 
-🔹 Movie Metadata
+Libraries Used
 
-title, original_title
+pandas – Data manipulation and analysis
 
-genres, genre_names
+numpy – Numerical computations
 
-runtime, Half_runtime
+ast – Parsing JSON-like strings
 
-original_language
+datetime – Handling date and time features
 
-Companies, Countries
+Data Cleaning
 
-🔹 Release Information
+Removed missing values and duplicate records.
 
-release_date
+Standardized language codes to uppercase (e.g., en → EN).
 
-year, month, month_Name, day
+Converted date columns to datetime objects and extracted year, month, and day.
 
-release_year
+Feature Engineering
 
-🔹 Feature Engineering
+Created Half_runtime = runtime / 2.
 
-Capitalized titles
+Calculated Profit as Revenue - Budget.
 
-Runtime transformation
+Classified profits as positive or negative using profit_value.
 
-Derived profit and popularity metrics
+Standardized text features: titles to uppercase, taglines to lowercase.
 
-🛠️ Tools & Technologies
+Extracted genre names from JSON-like strings.
 
-Python
+Key Analysis & Insights
+Revenue Trends by Release Year
 
-Pandas – data manipulation and analysis
+Total movie revenue shows steady growth from the late 1990s.
 
-NumPy – numerical operations
+Strong surge observed between 2009–2015.
 
-Matplotlib – data visualization
+Peak revenue year: 2015.
 
-Google Colab – interactive analysis
+Slight decline in 2017, likely due to fewer movies or incomplete data.
 
-🔍 Key Analysis Performed
+Revenue by Original Language
 
-Initial data inspection using head(), info(), describe() and iloc
+English-language movies dominate total revenue.
 
-Handling complex categorical fields such as multi-genre movies
+Other languages (Japanese JA, Chinese ZH, Swedish SV) contribute significantly less.
 
-Exploratory analysis of:
+Highlights the global commercial dominance of English-language films.
 
-Budget vs Revenue vs Profit
+Revenue vs Budget Trends
 
-Popularity vs Profitability
+Budgets and revenues have steadily increased over time.
 
-Runtime impact on performance
+Revenue growth often outpaces budget growth, indicating improved profitability in peak years.
 
-Genre-based trends
+Higher budgets do not always guarantee higher returns.
 
-Release year and seasonal patterns
+Maximum Movie Runtime
 
-Feature engineering to improve analytical clarity
+Maximum runtime has gradually increased over decades.
 
-📊 Key Insights
+1970s–1980s: 120–130 minutes
 
-Revenue alone is misleading — movies with high revenue may still be unprofitable due to large budgets
+2000s onward: Movies often exceed 150 minutes
 
-Popularity does not guarantee profit, highlighting the difference between audience interest and financial success
+Suggests growing audience acceptance of longer, high-budget films.
 
-Genre plays a significant role in profitability patterns across movies
+Functions Implemented
 
-Release timing shows seasonality effects, impacting movie performance
+to_uppercase – Converts string columns to uppercase
 
-Extremely long runtimes do not consistently lead to better popularity or profit
+to_lowercase – Converts string columns to lowercase
 
-💡 What This Project Demonstrates
+calculate_profit – Computes profit as Revenue - Budget
 
-Ability to work with real-world, non-clean datasets
+revised_profit – Alternative profit calculation using a lambda function
 
-Strong understanding of exploratory data analysis (EDA)
+func – Extracts genre names from JSON-like strings
 
-Use of feature engineering to derive meaningful business metrics
+How to Run
 
-Focus on business and profitability insights, not just surface-level trends
+Mount Google Drive in Colab:
 
-🚀 How to Run the Project
+from google.colab import drive
+drive.mount('/content/drive')
 
-Clone the repository
 
-Open Google colab
+Load the dataset:
 
-Install required libraries:
+import pandas as pd
+data = pd.read_csv('/content/drive/MyDrive/Colab Notebooks/imdb_data.csv')
 
-pip install pandas numpy matplotlib
 
-Run the notebook cells sequentially
+Execute cells sequentially for:
 
-📎 Project Structure
+Data exploration
 
-├── data/imdb_data.csv
-├── notebook/IMDB Movie Performance & Profitability Analysis.ipynb
-└── README.md
+Cleaning & preprocessing
 
-📬 Contact
+Feature engineering
 
-Saransh Chahar-Aspiring Data Analyst / Data ScientistGitHub: https://github.com/Saransh45
+Revenue and profitability analysis
 
+Conclusion
+
+The project provides insights into movie revenue trends, profitability, language impact, and runtime evolution.
+
+English-language movies dominate global box-office revenue.
+
+Revenue growth generally outpaces budget increases, but high investment does not always guarantee proportional returns.
+
+Modern films tend to have longer runtimes compared to earlier decades.
+
+Future Work
+
+Extend analysis to genre-based revenue trends
+
+Analyze profitability by production companies and countries
+
+Add visualizations using Matplotlib or Seaborn
+
+Apply predictive modeling to forecast future movie revenues
